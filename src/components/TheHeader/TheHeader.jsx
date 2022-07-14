@@ -6,7 +6,7 @@ const TheHeader = () => {
     <header className="header">
       <div className="scheme">
         <div className="header-content">
-          <div className="placeholder" />
+          <div className="placeholder">Header</div>
         </div>
       </div>
     </header>

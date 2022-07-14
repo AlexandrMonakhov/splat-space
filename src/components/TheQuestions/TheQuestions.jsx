@@ -6,7 +6,7 @@ const TheQuestions = () => {
     <section className="questions">
       <div className="scheme">
         <div className="questions-content">
-          <div className="placeholder" />
+          <div className="placeholder">Questions</div>
         </div>
       </div>
     </section>
