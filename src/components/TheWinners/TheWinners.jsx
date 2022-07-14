@@ -6,7 +6,7 @@ const TheWinners = () => {
     <section className="winners">
       <div className="scheme">
         <div className="winners-content">
-          <div className="placeholder" />
+          <div className="placeholder">Winners</div>
         </div>
       </div>
     </section>

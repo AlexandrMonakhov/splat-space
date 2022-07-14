@@ -6,7 +6,7 @@ const TheFooter = () => {
     <footer className="footer">
       <div className="scheme">
         <div className="footer-content">
-          <div className="placeholder" />
+          <div className="placeholder">Footer</div>
         </div>
       </div>
     </footer>

@@ -6,7 +6,7 @@ const MainScreen = () => {
     <section className="main-screen">
       <div className="scheme">
         <div className="main-screen-content">
-          <div className="placeholder" />
+          <div className="placeholder">MainScreen</div>
         </div>
       </div>
     </section>

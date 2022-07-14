@@ -6,7 +6,7 @@ const TheRules = () => {
     <section className="rules">
       <div className="scheme">
         <div className="rules-content">
-          <div className="placeholder" />
+          <div className="placeholder">Rules</div>
         </div>
       </div>
     </section>
