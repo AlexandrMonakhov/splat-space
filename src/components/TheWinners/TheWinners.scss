@@ -1,7 +1,68 @@
 .winners {
-  padding: 120px 0;
+  padding: 360px 0;
   
   &-content {
     height: 581px;
+    color: #ffffff;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  &__tabs-button {
+    padding: 16px 32px;
+    border-radius: 68px;
+    border: none;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    color: #282828;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &.active {
+      background-color: #139DD7;
+      color: #ffffff;
+    }
+  }
+
+  &__line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 110%;
+    padding: 16px 0;
+    border-top: 1px solid #78819C;
+
+    &:last-child {
+      border-bottom: 1px solid #78819C;
+    }
+  }
+
+  &__line-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    background-color: #139DD7;
+    border-radius: 50%;
+  }
+
+  &__line-name {
+    margin-right: auto;
+    margin-left: 20px;
   }
 }

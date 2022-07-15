@@ -6,11 +6,13 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #2C4890;
+  background: #2C4890 url('./assets/img/main-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
   font-family: sans-serif;
 }
 
-h1, h2 {
+h1, h2, h3, p {
   margin: 0;
   padding: 0;
 }
@@ -23,9 +25,21 @@ button {
   cursor: pointer;
 }
 
+img {
+  max-width: 100%;
+}
+
 .scheme {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.section__title {
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 120%;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .placeholder {
