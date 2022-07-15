@@ -1,7 +1,59 @@
 .prizes {
   padding-top: 120px;
+  background-image: url('./assets/prizes-bg.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
 
   &-content {
     height: 1190px;
+    color: #ffffff;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    max-width: 671px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+    p {
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 110%;
+      text-align: center;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__card {
+    max-width: 280px;
+  }
+
+  &__card-title {
+    margin-top: 15px;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 110%;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__clouds {
+    position: absolute;
+    bottom: -250px;
+    right: 0;
+    left: 0;
+  }
+
+  &__clouds-image {
+    width: 100%;
   }
 }

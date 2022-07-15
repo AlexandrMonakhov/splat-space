@@ -3,6 +3,35 @@
   padding-bottom: 80px;
 
   &-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 75px;
+    color: #ffffff;
+  }
+
+  &__document-links {
+    margin-right: auto;
+    margin-left: 60px;
+
+    a {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      color: #ffffff;
+      text-decoration: underline;
+
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+    }
+  }
+
+  &__socials {
+    margin-right: 63px;
+
+    a:not(:last-child) {
+      margin-right: 32px;
+    }
   }
 }

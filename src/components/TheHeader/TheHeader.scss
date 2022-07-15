@@ -1,5 +1,20 @@
 .header {
+  background: rgba(255, 255, 255, .05);
+  backdrop-filter: blur(30px);
+
   &-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 96px;
+  }
+
+  &-navigation__link {
+    color: #ffffff;
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
   }
 }
