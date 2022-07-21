@@ -47,3 +47,17 @@
     line-height: 120%;
   }
 }
+
+@media screen and (max-width: 956px) {
+  .rules {
+    margin-top: 0;
+
+    &__steps {
+      grid-template-columns: 1fr;
+    }
+
+    &-content {
+      height: 894px;
+    }
+  }
+}

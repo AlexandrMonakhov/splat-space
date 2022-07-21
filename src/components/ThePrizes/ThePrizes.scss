@@ -57,3 +57,49 @@
     width: 100%;
   }
 }
+
+@media screen and (max-width: 1300px) {
+  .prizes {
+    &-content {
+      height: 960px;
+    }
+  }
+}
+
+@media screen and (max-width: 956px) {
+  .prizes {
+    &-content {
+      height: 730px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .prizes {
+    &__card {
+      img {
+        min-height: 256px;
+        object-fit: cover;
+      }
+    }
+
+    &__subtitle {
+      p {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 556px) {
+  .prizes {
+    &-content {
+      height: auto;
+    }
+
+    &__cards {
+      flex-direction: column;
+    }
+  }
+}

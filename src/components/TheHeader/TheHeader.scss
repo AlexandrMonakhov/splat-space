@@ -2,6 +2,10 @@
   background: rgba(255, 255, 255, .05);
   backdrop-filter: blur(30px);
 
+  &__logo-splat, &__logo-magnit  {
+    height: 100%;
+  }
+
   &-content {
     display: flex;
     align-items: center;
@@ -15,6 +19,40 @@
 
     &:not(:last-child) {
       margin-right: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: 956px) {
+  .header {
+    &__logo-magnit {
+      margin-right: auto;
+      margin-left: 30px;
+    }
+
+    &-content {
+      height: 80px;
+    }
+
+    &-navigaton__links {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 556px) {
+  .header {
+    &__logo-magnit {
+      margin-right: auto;
+      margin-left: 20px;
+    }
+
+    &-content {
+      height: 60px;
+    }
+
+    &-navigaton__links {
+      display: none;
     }
   }
 }
