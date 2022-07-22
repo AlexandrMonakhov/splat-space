@@ -58,6 +58,20 @@
   }
 }
 
+.prizes {
+  .planet {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .planet-2 {
+    position: absolute;
+    bottom: 17%;
+    right: 0;
+  }
+}
+
 @media screen and (max-width: 1300px) {
   .prizes {
     &-content {
@@ -89,6 +103,10 @@
         font-size: 22px;
       }
     }
+
+    .planet-2 {
+      right: -65px;
+    }
   }
 }
 
@@ -100,6 +118,10 @@
 
     &__cards {
       flex-direction: column;
+    }
+
+    .planet-2 {
+      display: none;
     }
   }
 }

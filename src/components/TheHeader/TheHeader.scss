@@ -21,6 +21,24 @@
       margin-right: 32px;
     }
   }
+
+  &-menu {
+    &__button {
+      width: 28px;
+      height: 20px;
+      background-color: transparent;
+      background-image: url("../TheHeader/assets/img/menu.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: none;
+      margin-right: 21px;
+      display: none;
+
+      @media (max-width: 560px) {
+        margin-left: auto;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 956px) {
@@ -36,6 +54,10 @@
 
     &-navigaton__links {
       display: none;
+    }
+
+    &-menu__button {
+      display: block;
     }
   }
 }

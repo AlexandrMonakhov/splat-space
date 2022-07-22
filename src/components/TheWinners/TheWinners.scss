@@ -1,9 +1,16 @@
 .winners {
-  padding: 360px 0;
+  position: relative;
+  padding-top: 360px;
+  padding-bottom: 120px;
   
   &-content {
     height: 581px;
     color: #ffffff;
+  }
+
+  &__content {
+    max-width: 794px;
+    margin: 0 auto;
   }
 
   &__title {
@@ -66,3 +73,79 @@
     margin-left: 20px;
   }
 }
+
+.winners {
+  .moon {
+    position: absolute;
+    bottom: -40%;
+    z-index: -1;
+  }
+  
+  .star {
+    position: absolute;
+    top: 30%;
+    right: 0;
+  }
+  
+  .planet {
+    position: absolute;
+    top: 22%;
+    left: 6%;
+  }
+}
+
+@media screen and (max-width: 1166px) {
+  .winners {
+    .moon {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .winners {
+    .planet {
+      left: -7%;
+    }
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .winners {
+    .star {
+      position: absolute;
+      bottom: 0;
+      top: auto;
+      right: -110px;
+      z-index: -1;
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .winners {
+    .planet {
+      top: 15%;
+      left: -12%;
+      z-index: -1;
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .winners {
+    padding-bottom: 60px;
+    
+    &__tabs-button {
+      font-size: 14px;
+      line-height: 120%;
+      padding: 12px 20px;
+    }
+
+    &__line {
+      font-size: 14px;
+    }
+  }
+}
+
+

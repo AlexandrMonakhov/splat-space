@@ -3,9 +3,13 @@ import './TheWinners.scss';
 
 import { winners } from './seeds';
 
+import planet from './assets/img/planet.png';
+import moon from './assets/img/moon.png';
+import star from './assets/img/star.png';
+
 const TheWinners = () => {
   return (
-    <section className="winners">
+    <section className="winners" id="winners">
       <div className="scheme">
         <div className="winners-content">
           <div className="winners__title">
@@ -29,6 +33,18 @@ const TheWinners = () => {
             }
           </div>
         </div>
+      </div>
+
+      <div className="moon">
+        <img src={moon} alt="Декоративная картинка: планета" />
+      </div>
+
+      <div className="planet">
+        <img src={planet} alt="Декоративная картинка: планета" />
+      </div>
+
+      <div className="star">
+        <img src={star} alt="Декоративная картинка: падающая звезда" />
       </div>
     </section>
   )

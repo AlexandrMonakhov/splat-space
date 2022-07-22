@@ -2,10 +2,6 @@
   padding: 120px 0;
   background-color: #ffffff;
 
-  &-content {
-    height: 415px;
-  }
-
   &__title {
     margin-bottom: 50px;
     color: #0081C2;
@@ -28,6 +24,7 @@
     }
 
     &-header {
+      font-family: 'Futura New Demi', sans-serif;
       display: flex;
       align-items: center;
       justify-content: space-between;

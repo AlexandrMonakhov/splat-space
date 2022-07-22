@@ -4,7 +4,7 @@ import './TheHeader.scss';
 import logoSplat from "../../assets/img/logo-splat.svg";
 import logoMagnit from "../../assets/img/logo-magnit.svg";
 
-const TheHeader = () => {
+const TheHeader = ({ toggle }) => {
   return (
     <header className="header">
       <div className="scheme">
@@ -46,6 +46,8 @@ const TheHeader = () => {
           <div className="header__logo header__logo-magnit">
             <img src={logoMagnit} alt="Логотип: Магнит" />
           </div>
+
+          <button onClick={toggle} className="header-menu__button" />
         </div>
       </div>
     </header>

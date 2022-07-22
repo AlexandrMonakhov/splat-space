@@ -12,6 +12,7 @@
     color: #ffffff;
     
     .title {
+      font-family: 'Marvin', sans-serif;
       font-weight: 400;
       font-size: 72px;
       line-height: 110%;
@@ -25,6 +26,7 @@
     color: #ffffff;
     
     .subtitle {
+      font-family: 'Marvin', sans-serif;
       font-weight: 400;
       font-size: 40px;
       line-height: 120%;
@@ -38,6 +40,62 @@
     &-content {
       height: auto;
       margin-bottom: 35px;
+    }
+
+    &__title {
+      .title {
+        font-size: 56px;
+        line-height: 110%;
+      }
+    }
+
+    &__subtitle {
+      .subtitle {
+        font-size: 30px;
+        line-height: 120%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main-screen {
+    &-content {
+      height: auto;
+      margin-bottom: 35px;
+    }
+
+    &__title {
+      .title {
+        font-size: 36px;
+      }
+    }
+
+    &__subtitle {
+      .subtitle {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .main-screen {
+    &-content {
+      height: auto;
+      margin-bottom: 35px;
+    }
+
+    &__title {
+      .title {
+        font-size: 32px;
+      }
+    }
+
+    &__subtitle {
+      .subtitle {
+        font-size: 20px;
+      }
     }
   }
 }

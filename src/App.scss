@@ -1,15 +1,65 @@
+@font-face {
+  font-family: 'Futura New Book';
+  src: url('./assets/fonts/FuturaNewBook-Obl.woff2') format('woff2'),
+      url('./assets/fonts/FuturaNewBook-Obl.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura New Demi';
+  src: url('./assets/fonts/FuturaNewDemi-Reg.woff2') format('woff2'),
+      url('./assets/fonts/FuturaNewDemi-Reg.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura New';
+  src: url('./assets/fonts/FuturaNewMedium-Reg.woff2') format('woff2'),
+      url('./assets/fonts/FuturaNewMedium-Reg.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura New Book';
+  src: url('./assets/fonts/FuturaNewBook-Reg.woff2') format('woff2'),
+      url('./assets/fonts/FuturaNewBook-Reg.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Marvin';
+  src: url('./assets/fonts/Marvin-Round.woff2') format('woff2'),
+      url('./assets/fonts/Marvin-Round.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
 body {
+  font-family: 'Futura New Book', sans-serif;
   margin: 0;
   padding: 0;
   background: #2C4890 url('./assets/img/main-bg.jpg');
   background-repeat: no-repeat;
   background-position: top center;
-  font-family: sans-serif;
+  background-size: contain;
+}
+
+.App {
+  overflow-x: hidden;
 }
 
 h1, h2, h3, p {
@@ -22,6 +72,7 @@ a {
 }
 
 button {
+  font-family: 'Futura New Book', sans-serif;
   cursor: pointer;
 }
 
@@ -37,6 +88,7 @@ img {
 }
 
 .section__title {
+  font-family: 'Marvin', sans-serif;
   font-weight: 500;
   font-size: 56px;
   line-height: 120%;
@@ -55,9 +107,18 @@ img {
   height: 100%;
 }
 
-@media screen and (max-width: 956px) {
+@media screen and (max-width: 1363px) {
   body {
     background: #2C4890 url('./assets/img/main-bg-tablet.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+}
+
+@media screen and (max-width: 956px) {
+  body {
+    background: #2C4890 url('./assets/img/main-bg-mobile.jpg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top center;
@@ -69,15 +130,8 @@ img {
   }
 }
 
-@media screen and (max-width: 768px) {
-  body {
-    background: #2C4890 url('./assets/img/main-bg-tablet.jpg');
-    background-repeat: no-repeat;
-    background-position: top center;
-  }
-}
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 390px) {
   .scheme {
     padding: 0 16px;
   }
