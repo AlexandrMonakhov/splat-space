@@ -57,3 +57,71 @@
     width: 100%;
   }
 }
+
+.prizes {
+  .planet {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .planet-2 {
+    position: absolute;
+    bottom: 17%;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .prizes {
+    &-content {
+      height: 960px;
+    }
+  }
+}
+
+@media screen and (max-width: 956px) {
+  .prizes {
+    &-content {
+      height: 730px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .prizes {
+    &__card {
+      img {
+        min-height: 256px;
+        object-fit: cover;
+      }
+    }
+
+    &__subtitle {
+      p {
+        font-size: 22px;
+      }
+    }
+
+    .planet-2 {
+      right: -65px;
+    }
+  }
+}
+
+@media screen and (max-width: 556px) {
+  .prizes {
+    &-content {
+      height: auto;
+    }
+
+    &__cards {
+      flex-direction: column;
+    }
+
+    .planet-2 {
+      display: none;
+    }
+  }
+}

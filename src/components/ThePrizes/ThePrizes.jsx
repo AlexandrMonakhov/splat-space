@@ -4,10 +4,12 @@ import './ThePrizes.scss';
 import prizeOne from './assets/prize-1.png';
 import prizeTwo from './assets/prize-2.png';
 import clouds from './assets/clouds.png';
+import planet from './assets/planet.png';
+import planetTwo from './assets/planet-2.png';
 
 const ThePrizes = () => {
   return (
-    <section className="prizes">
+    <section className="prizes" id="prizes">
       <div className="scheme">
         <div className="prizes-content">
           <div className="prizes__title">
@@ -36,6 +38,14 @@ const ThePrizes = () => {
 
       <div className="prizes__clouds">
         <img className="prizes__clouds-image" src={clouds} alt="Облака" />
+      </div>
+
+      <div className="planet">
+        <img src={planet} alt="Декоративная картинка: планета" />
+      </div>
+
+      <div className="planet-2">
+        <img src={planetTwo} alt="Декоративная картинка: планета" />
       </div>
     </section>
   )

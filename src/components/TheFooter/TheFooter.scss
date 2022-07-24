@@ -2,10 +2,14 @@
   padding-top: 60px;
   padding-bottom: 80px;
 
+  &__logo {
+    grid-area: LOGO;
+  }
+
   &-content {
-    display: flex;
+    display: grid;
+    grid-template-areas: 'LOGO LINKS SOCIALS COPYRIGHT';
     align-items: center;
-    justify-content: space-between;
     height: 75px;
     color: #ffffff;
   }
@@ -13,6 +17,7 @@
   &__document-links {
     margin-right: auto;
     margin-left: 60px;
+    grid-area: LINKS;
 
     a {
       font-weight: 400;
@@ -29,9 +34,68 @@
 
   &__socials {
     margin-right: 63px;
+    grid-area: SOCIALS;
 
     a:not(:last-child) {
       margin-right: 32px;
+    }
+  }
+
+  &__copyright {
+    grid-area: COPYRIGHT;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .footer {
+    &-content {
+      height: auto;
+      align-items: self-end;
+      grid-template-areas: 'LOGO . SOCIALS' 
+                           'LINKS . COPYRIGHT';
+    }
+
+    &__document-links {
+      display: flex;
+      flex-direction: column;
+      margin-left: 0;
+      margin-top: 60px;
+
+      a {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 556px) {
+  .footer {
+    &-content {
+      height: auto;
+      justify-items: center;
+      grid-template-areas: 'LOGO'
+                           'SOCIALS' 
+                           'LINKS' 
+                           'COPYRIGHT';
+    }
+
+    &__document-links {
+      align-items: center;
+      margin-left: auto;
+
+      a {
+        margin-bottom: 20px;
+        &:not(:last-child) {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &__socials {
+      margin-top: 23px;
+      margin-right: 0;
     }
   }
 }

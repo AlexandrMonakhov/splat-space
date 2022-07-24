@@ -7,7 +7,7 @@ import stepThree from './assets/step-3.png';
 
 const TheRules = () => {
   return (
-    <section className="rules">
+    <section className="rules" id="rules">
       <div className="scheme">
         <div className="rules-content">
           <div className="rules__title">
@@ -18,8 +18,7 @@ const TheRules = () => {
             <div className="rules__step">
               <img className="rules__step-image" src={stepOne} alt="Купи продукты SPLAT Kids или SPLAT Junior" />     
 
-              <h3 className="rules__step-title">Купи продукты SPLAT Kids или SPLAT Junior</h3>
-              <p className="rules__step-subtitle">c 1 июня по 30 ноября 2022 года</p>      
+              <h3 className="rules__step-title">Купите товары из детской серии SPLATc 24 августа 2022 года по 21 сентября 2022 года</h3>   
             </div>
 
             <div className="rules__step">

@@ -5,11 +5,11 @@ import splatProduct from './assets/splat-product.png';
 
 const MainScreen = () => {
   return (
-    <section className="main-screen">
+    <section className="main-screen" id="main-screen">
       <div className="scheme">
         <div className="main-screen-content">
           <div className="main-screen__title">
-            <h1 className="title">Чисти зубы, как космонавт</h1>
+            <h1 className="title">Чисти зубы, как&nbsp;космонавт</h1>
           </div>
 
           <div className="main-screen__image">

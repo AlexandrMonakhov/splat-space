@@ -16,7 +16,7 @@ const TheQuestions = () => {
   };
 
   return (
-    <section className="questions">
+    <section className="questions" id="questions">
       <div className="scheme">
         <div className="questions-content">
           <div className="questions__title">
