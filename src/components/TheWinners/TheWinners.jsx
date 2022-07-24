@@ -1,13 +1,26 @@
-import React from 'react';
-import './TheWinners.scss';
+import React, { useMemo, useState } from "react";
+import "./TheWinners.scss";
 
-import { winners } from './seeds';
+import { winners } from "./seeds";
 
-import planet from './assets/img/planet.png';
-import moon from './assets/img/moon.png';
-import star from './assets/img/star.png';
+import planet from "./assets/img/planet.png";
+import moon from "./assets/img/moon.png";
+import star from "./assets/img/star.png";
 
 const TheWinners = () => {
+  const [isCardShow, setIsCardShow] = useState(false);
+
+  const toggleTab = (val) => {
+    if (val === isCardShow) return;
+    setIsCardShow(val);
+  };
+
+  const filtredWinners = useMemo(() => {
+    return winners.filter(
+      ({ type }) => type === (isCardShow ? "card" : "prize")
+    );
+  }, [isCardShow]);
+
   return (
     <section className="winners" id="winners">
       <div className="scheme">
@@ -17,20 +30,30 @@ const TheWinners = () => {
           </div>
 
           <div className="winners__tabs">
-            <button className="winners__tabs-button active">Бонусы на карту</button>
-            <button className="winners__tabs-button">Главный приз</button>
+            <button
+              onClick={() => toggleTab(true)}
+              className={`winners__tabs-button ${isCardShow ? "active" : ""}`}
+            >
+              Бонусы на карту
+            </button>
+            <button
+              onClick={() => toggleTab(false)}
+              className={`winners__tabs-button ${!isCardShow ? "active" : ""}`}
+            >
+              Главный приз
+            </button>
           </div>
 
           <div className="winners__content">
-            {
-              winners.map((winner, index) => (
-                <div className="winners__line" key={winner.id}>
-                  <p className="winners__line-number">{++index}</p>
-                  <p className="winners__line-name">{winner.name}</p>
-                  <p className="winners__line-email">{winner.email}</p>
-                </div>
-              ))
-            }
+            {!filtredWinners.length
+              ? "увы, в этой категории пока никого нет"
+              : filtredWinners.map((winner, index) => (
+                  <div className="winners__line" key={winner.id}>
+                    <p className="winners__line-number">{++index}</p>
+                    <p className="winners__line-name">{winner.name}</p>
+                    <p className="winners__line-email">{winner.email}</p>
+                  </div>
+                ))}
           </div>
         </div>
       </div>
@@ -47,7 +70,7 @@ const TheWinners = () => {
         <img src={star} alt="Декоративная картинка: падающая звезда" />
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default TheWinners;
