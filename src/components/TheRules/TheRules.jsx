@@ -18,13 +18,13 @@ const TheRules = () => {
             <div className="rules__step">
               <img className="rules__step-image" src={stepOne} alt="Купи продукты SPLAT Kids или SPLAT Junior" />     
 
-              <h3 className="rules__step-title">Купите товары из детской серии SPLATc 24 августа 2022 года по 21 сентября 2022 года</h3>   
+              <h3 className="rules__step-title">Купи товары из детской серии SPLAT c 24 августа 2022 года по 21 сентября 2022 года</h3>   
             </div>
 
             <div className="rules__step">
-              <img className="rules__step-image" src={stepTwo} alt="Сохраняй чекдо окончания розыгрыша" />
+              <img className="rules__step-image" src={stepTwo} alt="Сохраняй чек до окончания розыгрыша" />
 
-              <h3 className="rules__step-title">Сохраняй чекдо окончания розыгрыша</h3>  
+              <h3 className="rules__step-title">Сохраняй чек до окончания розыгрыша</h3>  
             </div>
 
             <div className="rules__step">
