@@ -11,6 +11,8 @@
   &__content {
     height: 400px;
     max-width: 794px;
+    max-height: 400px;
+    overflow-y: auto;
     margin: 0 auto;
     overflow-y: auto;
 

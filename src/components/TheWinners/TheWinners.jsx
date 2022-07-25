@@ -49,7 +49,7 @@ const TheWinners = () => {
               ? "увы, в этой категории пока никого нет"
               : filtredWinners.map((winner, index) => (
                   <div className="winners__line" key={winner.id}>
-                    <p className="winners__line-number">{++index}</p>
+                    <p className="winners__line-number">{++index }</p>
                     <p className="winners__line-name">{winner.name}</p>
                     <p className="winners__line-email">{winner.email}</p>
                   </div>
