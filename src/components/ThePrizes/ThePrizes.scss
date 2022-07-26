@@ -1,10 +1,8 @@
 .prizes {
   padding-top: 120px;
-  background-image: url('./assets/prizes-bg.png');
-  background-repeat: no-repeat;
-  background-size: 100%;
   position: relative;
-
+  background: url('./assets/prizes-bg.png') no-repeat;
+  background-size: 100%;
   &-content {
     height: 1190px;
     color: #ffffff;
@@ -34,7 +32,7 @@
   }
 
   &__card {
-    max-width: 280px;
+    max-width: 280px;z-index: 66;
   }
 
   &__card-title {
@@ -56,6 +54,13 @@
   &__clouds-image {
     width: 100%;
   }
+}
+
+.stt {
+  height: 100%;
+  position: absolute !important;
+  width: 100%;
+  bottom: -100px;
 }
 
 .prizes {
@@ -96,7 +101,6 @@
   }
 }
 
-
 @media screen and (max-width: 768px) {
   .prizes {
     &__card {
@@ -127,9 +131,12 @@
     &__cards {
       flex-direction: column;
     }
-
+    .planet {
+      left: -64px;
+      opacity: 0.8;
+    }
     .planet-2 {
-      display: none;
+      right: -100px;
     }
   }
 }

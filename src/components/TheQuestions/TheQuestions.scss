@@ -1,38 +1,35 @@
 .questions {
-  padding: 120px 0;
+  padding: 140px 0;
   background-color: #ffffff;
 
   &__title {
     margin-bottom: 50px;
-    color: #0081C2;
+    color: #0081c2;
   }
 }
 
 .accordion {
   max-width: 909px;
-  margin: 0 auto;
+  margin: 10px auto;
 
   &-item {
     background-color: var(--white);
     border-top: 1px solid #28282850;
     overflow: hidden;
-    padding: 20px 0;
-    transition: all 0.3s;
-
+    padding: 20px 0; 
     &:last-child {
       border-bottom: 1px solid #28282850;
     }
 
     &-header {
-      font-family: 'Futura New Demi', sans-serif;
+      font-family: "Futura New Demi", sans-serif;
       display: flex;
       align-items: center;
       justify-content: space-between;
       cursor: pointer;
 
       &__img {
-        background: url("./assets/inactive-arrow.svg") center center
-          no-repeat;
+        background: url("./assets/inactive-arrow.svg") center center no-repeat;
         background-size: cover;
         min-width: 37px;
         max-width: 37px;
@@ -40,12 +37,10 @@
         max-height: 36px;
         transition: all linear 0.3s;
         border-radius: 50%;
-
         &.rotated {
-          transition: all linear 0.3s;
-          background: url("./assets/active-arrow.svg") center center
-            no-repeat;
-          background-size: cover;
+          transition: all linear 0.2s;
+
+          transform: rotate(180deg);
         }
       }
 
@@ -60,12 +55,14 @@
 
     &-body {
       max-height: 0;
-      transition: all 0.8s;
+      transition: all 1s linear;
+
       overflow: hidden;
 
       &--active {
+        transition-delay: 0.2s;
         max-height: 50vh;
-        transition: all 0.8s;
+        transition: all 1s linear;
       }
     }
   }

@@ -2,7 +2,7 @@
   position: relative;
   padding-top: 360px;
   padding-bottom: 120px;
-  
+
   &-content {
     height: 581px;
     color: #ffffff;
@@ -15,7 +15,17 @@
     overflow-y: auto;
     margin: 0 auto;
     overflow-y: auto;
-
+    &__empty {
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &.centred {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     &::-webkit-scrollbar-track {
       -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
       background-color: rgba(0, 0, 0, 0.1);
@@ -29,7 +39,7 @@
 
     &::-webkit-scrollbar-thumb {
       border-radius: 10px;
-      background-color: #139DD7;
+      background-color: #139dd7;
     }
   }
 
@@ -58,7 +68,7 @@
     }
 
     &.active {
-      background-color: #139DD7;
+      background-color: #139dd7;
       color: #ffffff;
     }
   }
@@ -72,10 +82,10 @@
     line-height: 110%;
     padding: 16px 0;
     padding-right: 10px;
-    border-top: 1px solid #78819C;
+    border-top: 1px solid #78819c;
 
     &:last-child {
-      border-bottom: 1px solid #78819C;
+      border-bottom: 1px solid #78819c;
     }
   }
 
@@ -85,7 +95,7 @@
     justify-content: center;
     min-width: 44px;
     min-height: 44px;
-    background-color: #139DD7;
+    background-color: #139dd7;
     border-radius: 50%;
   }
 
@@ -98,16 +108,18 @@
 .winners {
   .moon {
     position: absolute;
-    bottom: -40%;
+    bottom: -25%;
+    left: -19%;
+    height: 600px;
     z-index: -1;
   }
-  
+
   .star {
     position: absolute;
     top: 30%;
     right: 0;
   }
-  
+
   .planet {
     position: absolute;
     top: 22%;
@@ -156,7 +168,7 @@
 @media screen and (max-width: 430px) {
   .winners {
     padding-bottom: 60px;
-    
+
     &__tabs-button {
       font-size: 14px;
       line-height: 120%;
@@ -168,5 +180,3 @@
     }
   }
 }
-
-

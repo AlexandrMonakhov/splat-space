@@ -1,4 +1,7 @@
-import React, { useMemo, useState } from "react";
+import React, { Suspense, useMemo, useState } from "react";
+import { useParallax } from "react-scroll-parallax";
+import { SwitchTransition, CSSTransition } from "react-transition-group";
+
 import "./TheWinners.scss";
 
 import { winners } from "./seeds";
@@ -6,8 +9,17 @@ import { winners } from "./seeds";
 import planet from "./assets/img/planet.png";
 import moon from "./assets/img/moon.png";
 import star from "./assets/img/star.png";
+const Comets = React.lazy(() => import("../../misc/Comets"));
 
 const TheWinners = () => {
+  const planetPrlx = useParallax({ speed: 3, rotate: [0, 30] });
+  const moonPrlx = useParallax({ translateX: [-20, 0], rotate: [0, 70] });
+  const cometPrlx = useParallax({
+    speed: 22,
+    translateX: [250, 1],
+    translateY: [-200, 1],
+  });
+
   const [isCardShow, setIsCardShow] = useState(false);
 
   const toggleTab = (val) => {
@@ -15,14 +27,18 @@ const TheWinners = () => {
     setIsCardShow(val);
   };
 
-  const filtredWinners = useMemo(() => {
-    return winners.filter(
-      ({ type }) => type === (isCardShow ? "card" : "prize")
-    );
-  }, [isCardShow]);
+  const cardWinners = useMemo(
+    () => winners.filter(({ type }) => type === "card"),
+    []
+  );
+
+  const renderTable = () => console.log(cardWinners, "d");
 
   return (
     <section className="winners" id="winners">
+      <Suspense>
+        <Comets count={5} />
+      </Suspense>
       <div className="scheme">
         <div className="winners-content">
           <div className="winners__title">
@@ -44,29 +60,53 @@ const TheWinners = () => {
             </button>
           </div>
 
-          <div className="winners__content">
-            {!filtredWinners.length
-              ? "увы, в этой категории пока никого нет"
-              : filtredWinners.map((winner, index) => (
-                  <div className="winners__line" key={winner.id}>
-                    <p className="winners__line-number">{++index }</p>
-                    <p className="winners__line-name">{winner.name}</p>
-                    <p className="winners__line-email">{winner.email}</p>
+          <SwitchTransition>
+            <CSSTransition
+              key={isCardShow}
+              addEndListener={(node, done) => {
+                node.addEventListener("transitionend", done, false);
+              }}
+              classNames="fade"
+            >
+              <div className="d">
+                {isCardShow ? (
+                  <div
+                    className={`winners__content ${
+                      !cardWinners.length ? "centred" : ""
+                    }`}
+                  >
+                    {!cardWinners.length
+                      ? "увы, в этой категории пока никого нет"
+                      : cardWinners.map((winner, index) => (
+                          <div className="winners__line" key={winner.id}>
+                            <p className="winners__line-number">{++index}</p>
+                            <p className="winners__line-name">{winner.name}</p>
+                            <p className="winners__line-email">
+                              {winner.email}
+                            </p>
+                          </div>
+                        ))}
                   </div>
-                ))}
-          </div>
+                ) : (
+                  <div className="winners__content__empty">
+                    приз еще ищет победителя 😉
+                   </div>
+                )}
+              </div>
+            </CSSTransition>
+          </SwitchTransition>
         </div>
       </div>
 
-      <div className="moon">
+      <div ref={moonPrlx.ref} className="moon">
         <img src={moon} alt="Декоративная картинка: планета" />
       </div>
 
-      <div className="planet">
+      <div ref={planetPrlx.ref} className="planet">
         <img src={planet} alt="Декоративная картинка: планета" />
       </div>
 
-      <div className="star">
+      <div ref={cometPrlx.ref} className="star">
         <img src={star} alt="Декоративная картинка: падающая звезда" />
       </div>
     </section>
