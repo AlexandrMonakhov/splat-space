@@ -32,8 +32,6 @@ const TheWinners = () => {
     []
   );
 
-  const renderTable = () => console.log(cardWinners, "d");
-
   return (
     <section className="winners" id="winners">
       <Suspense>
@@ -90,7 +88,7 @@ const TheWinners = () => {
                 ) : (
                   <div className="winners__content__empty">
                     приз еще ищет победителя 😉
-                   </div>
+                  </div>
                 )}
               </div>
             </CSSTransition>
